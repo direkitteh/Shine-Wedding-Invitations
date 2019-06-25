@@ -1,0 +1,36 @@
+Familiar concepts:
+- Generating elements via Javascript
+- Creating helper functions
+- Sorting
+- Click handling
+- Interactions that only count one time
+- Setting attributes via Javascript
+- Arrays, forEach, and for loops
+- Console logging
+
+Unfamiliar concepts:
+- Local storage: Apparently it stores everything as Strings instead of the original data type. Pretty straightforward otherwise.
+- Converting undefined / null objects to numbers was more difficult than anticipated. I made a helper method to handle that.
+- I needed a refresher on JQuery syntax, but the reference guide was sufficient.
+- I also needed a refresher on regex syntax in Javascript.
+
+Additional notes:
+- I probably could have done this without JQuery. It's just easier to select items with JQuery.
+- For some reason, $.create wasn't working for me, so I used document.createElement
+- I used the title attribute to indicate the number of times the images had been clicked. The count updates on each click.
+- On load, there will be a console log of the last order by clicks followed by the ordered image numbers and their click counts.
+  Example:
+  Stored order: 4,3,2,5
+  4: 2
+  3: 2
+  2: 2
+  5: 2
+  7: 2
+  0: 1
+  1: 1
+  6: 1
+- In the event of ties for click counts, the images are shown in ascending order.
+- Images ordered by click order are always displayed before images ordered by click count.
+- Only the first click per load specifies order, but you can click on the images an unlimited number of times for the click count.
+- I considered creating an Image class to centralize the handling of clicks and storage, but I felt it wasn't necessary.
+- I also thought about adding a border on clicked images for better user experience, but I didn't want to worry about margins.
